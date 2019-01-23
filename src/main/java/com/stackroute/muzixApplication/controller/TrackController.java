@@ -55,6 +55,9 @@ public class TrackController {
         return responseEntity;
     }
 
+    /*
+     *This method provide track details to the user of particular track Id.
+     */
     @GetMapping("/track/{trackId}")
     public ResponseEntity<?> getTrackById(@PathVariable int trackId){
         ResponseEntity responseEntity;
@@ -62,6 +65,9 @@ public class TrackController {
         return responseEntity;
     }
 
+    /*
+     * This method help user to update track comment of a particular track Id.
+     */
     @PutMapping("updateTrack")
     public ResponseEntity<?> updateTrack(@RequestBody Track track){
         ResponseEntity responseEntity;
@@ -69,12 +75,18 @@ public class TrackController {
         return responseEntity;
     }
 
+    /*
+     * This method help user to remove the track from database based on the input track Id.
+     */
     @DeleteMapping("trackRemove/{trackId}")
     public ResponseEntity<?> removeTrackById (@PathVariable int trackId){
         trackService.removeTrackById(trackId);
         return new ResponseEntity<String>("removed", HttpStatus.OK);
     }
 
+    /*
+     * This method help user to update track comment of a particular track Id.
+     */
     @GetMapping("/trackall/{trackName}")
     public ResponseEntity<?> gettrackByName(@PathVariable String trackName){
         ResponseEntity responseEntity;

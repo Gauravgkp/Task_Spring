@@ -3,14 +3,13 @@ package com.stackroute.muzixApplication.service;
 import com.stackroute.muzixApplication.domain.Track;
 import com.stackroute.muzixApplication.repository.TrackRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class TrackServiceImpl implements TrackService {
-    TrackRepository trackRepository;
+    private TrackRepository trackRepository;
 
     @Autowired
     public TrackServiceImpl (TrackRepository trackRepository){
