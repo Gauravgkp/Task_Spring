@@ -30,6 +30,9 @@ public class TrackController {
         this.trackService = trackService;
     }
 
+    /*
+     * This method provide user a mean to add new track in the database.
+     */
     @PostMapping("track")
     public ResponseEntity<?> saveTrack(@RequestBody Track track){
         ResponseEntity responseEntity;
@@ -42,6 +45,9 @@ public class TrackController {
         return responseEntity;
     }
 
+    /*
+     * This method provide user with all the track in the database.
+     */
     @GetMapping("tracks")
     public ResponseEntity<?> getAllTrack(){
         ResponseEntity responseEntity;

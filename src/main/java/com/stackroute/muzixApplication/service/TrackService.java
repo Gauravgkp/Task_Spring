@@ -14,6 +14,7 @@ public interface TrackService {
      * This method provide user a mean to add new track in the database.
      */
      public Track saveTrack(Track track);
+
     /*
      * This method provide user with all the track in the database.
      */
